@@ -15,7 +15,7 @@ until_date = date.today() - timedelta(days=1)
 
 consumo = connection.consumption(from_date, until_date)
 
-consumo24h = numpysum(consumo)
+consumo24h = sum(consumo)
 print(consumo24h)
 
 mqttdata = json.dumps({
